@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Image from "react-bootstrap/Image";
 
 function MainNavbar(params) {
+  let pathname = window.location.pathname;
   return (
     <Navbar variant="dark" bg="dark" expand="lg">
       <Link style={{ textDecoration: "none" }} to="/">
@@ -22,11 +23,13 @@ function MainNavbar(params) {
 
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="#/about">About Me</Nav.Link>
-          <Nav.Link href="/experience">Experience and Education</Nav.Link>
-          <Nav.Link href="/skills">Skills</Nav.Link>
-          <Nav.Link href="/projects">Projects</Nav.Link>
-          <Nav.Link href="/contact">Contact Me</Nav.Link>
+          <Nav.Link href={pathname + "/about"}>About Me</Nav.Link>
+          <Nav.Link href={pathname + "/experience"}>
+            Experience and Education
+          </Nav.Link>
+          <Nav.Link href={pathname + "/skills"}>Skills</Nav.Link>
+          <Nav.Link href={pathname + "/projects"}>Projects</Nav.Link>
+          <Nav.Link href={pathname + "/contact"}>Contact Me</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
