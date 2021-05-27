@@ -22,7 +22,7 @@ function MainNavbar(params) {
 
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="/about">About Me</Nav.Link>
+          <Nav.Link href="#/about">About Me</Nav.Link>
           <Nav.Link href="/experience">Experience and Education</Nav.Link>
           <Nav.Link href="/skills">Skills</Nav.Link>
           <Nav.Link href="/projects">Projects</Nav.Link>
