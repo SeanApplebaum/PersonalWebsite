@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Helmet } from "react-helmet";
+//import ReactNotification from "react-notifications-component";
+
+import MainNavbar from "./components/MainNavbar";
+import UnderConstruction from "./components/UnderConstruction";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      {/*<ReactNotification />*/}
+      <Helmet>
+        <meta name="theme-color" content="#343a40" />
+        <title>Sean Applebaum</title>
+      </Helmet>
+      <MainNavbar />
+
+      <Switch>
+        <Route exact path="/">
+          <UnderConstruction />
+        </Route>
+        <Route exact path="/about">
+          <UnderConstruction />
+        </Route>
+        <Route exact path="/experience">
+          <UnderConstruction />
+        </Route>
+        <Route exact path="/skills">
+          <UnderConstruction />
+        </Route>
+        <Route exact path="/projects">
+          <UnderConstruction />
+        </Route>
+        <Route exact path="/contact">
+          <UnderConstruction />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
