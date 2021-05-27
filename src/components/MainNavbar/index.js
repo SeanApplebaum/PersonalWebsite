@@ -7,7 +7,7 @@ function MainNavbar(params) {
   let pathname = window.location.pathname;
   return (
     <Navbar variant="dark" bg="dark" expand="lg">
-      <Link style={{ textDecoration: "none" }} to="/">
+      <Link style={{ textDecoration: "none" }} to={pathname + "/about"}>
         <Navbar.Brand className="navbar-brand">
           <Image
             src={process.env.PUBLIC_URL + "/logo320.png"}
