@@ -16,22 +16,22 @@ function App() {
       <MainNavbar />
 
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <UnderConstruction />
         </Route>
-        <Route path="/about">
+        <Route exact path="/about">
           <UnderConstruction />
         </Route>
-        <Route path="/experience">
+        <Route exact path="/experience">
           <UnderConstruction />
         </Route>
-        <Route path="/skills">
+        <Route exact path="/skills">
           <UnderConstruction />
         </Route>
-        <Route path="/projects">
+        <Route exact path="/projects">
           <UnderConstruction />
         </Route>
-        <Route path="/contact">
+        <Route exact path="/contact">
           <UnderConstruction />
         </Route>
       </Switch>
