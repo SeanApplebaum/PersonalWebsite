@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import { Helmet } from "react-helmet";
 //import ReactNotification from "react-notifications-component";
 
@@ -6,9 +6,8 @@ import MainNavbar from "./components/MainNavbar";
 import UnderConstruction from "./components/UnderConstruction";
 
 function App() {
-  let prepath = process.env.PUBLIC_URL;
   return (
-    <BrowserRouter>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       {/*<ReactNotification />*/}
       <Helmet>
         <meta name="theme-color" content="#343a40" />
@@ -16,6 +15,31 @@ function App() {
       </Helmet>
       <MainNavbar />
 
+      <Route
+        render={({ location }) => (
+          <Switch location={location}>
+            <Route exact path="/">
+              <UnderConstruction />
+            </Route>
+            <Route exact path="/about">
+              <UnderConstruction />
+            </Route>
+            <Route exact path="/experience">
+              <UnderConstruction />
+            </Route>
+            <Route exact path="/skills">
+              <UnderConstruction />
+            </Route>
+            <Route exact path="/projects">
+              <UnderConstruction />
+            </Route>
+            <Route exact path="/contact">
+              <UnderConstruction />
+            </Route>
+          </Switch>
+        )}
+      />
+      {/*
       <Switch>
         <Route path={prepath + "/"}>
           <UnderConstruction />
@@ -36,7 +60,8 @@ function App() {
           <UnderConstruction />
         </Route>
       </Switch>
-    </BrowserRouter>
+    */}
+    </HashRouter>
   );
 }
 
