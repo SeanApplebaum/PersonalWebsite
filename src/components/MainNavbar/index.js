@@ -6,7 +6,7 @@ import Image from "react-bootstrap/Image";
 function MainNavbar(params) {
   return (
     <Navbar variant="dark" bg="dark" expand="lg">
-      <Link style={{ textDecoration: "none" }} to="/about">
+      <Link style={{ textDecoration: "none" }} href="about">
         <Navbar.Brand className="navbar-brand">
           <Image
             src={process.env.PUBLIC_URL + "/logo320.png"}
