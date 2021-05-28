@@ -6,6 +6,7 @@ import MainNavbar from "./components/MainNavbar";
 import UnderConstruction from "./components/UnderConstruction";
 
 function App() {
+  let prepath = process.env.PUBLIC_URL;
   return (
     <BrowserRouter>
       {/*<ReactNotification />*/}
@@ -16,22 +17,22 @@ function App() {
       <MainNavbar />
 
       <Switch>
-        <Route path="/">
+        <Route path={prepath + "/"}>
           <UnderConstruction />
         </Route>
-        <Route path=".*/about">
+        <Route path={prepath + "/about"}>
           <UnderConstruction />
         </Route>
-        <Route path="/experience">
+        <Route path={prepath + "/experience"}>
           <UnderConstruction />
         </Route>
-        <Route path="/skills">
+        <Route path={prepath + "/skills"}>
           <UnderConstruction />
         </Route>
-        <Route path="/projects">
+        <Route path={prepath + "/projects"}>
           <UnderConstruction />
         </Route>
-        <Route path="/contact">
+        <Route path={prepath + "/contact"}>
           <UnderConstruction />
         </Route>
       </Switch>
