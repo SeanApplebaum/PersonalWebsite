@@ -19,7 +19,7 @@ function App() {
         <Route path="/">
           <UnderConstruction />
         </Route>
-        <Route path="*/about">
+        <Route path=".*/about">
           <UnderConstruction />
         </Route>
         <Route path="/experience">
