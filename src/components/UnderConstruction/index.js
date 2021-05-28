@@ -9,7 +9,7 @@ function UnderConstruction(props) {
       <h1>This site is currently under construction!</h1>
       <Construction />
       <h6>
-        If you wish to contact me, please send me an email at
+        If you wish to contact me, please send me an email at 1
         <a href="mailto: seanapplebaum@gmail.com"> seanapplebaum@gmail.com</a>
       </h6>
     </Jumbotron>
