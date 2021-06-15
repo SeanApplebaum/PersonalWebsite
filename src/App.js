@@ -1,4 +1,4 @@
-import { HashRouter, Switch, Route } from "react-router-dom";
+import { Router, Switch, Route } from "react-router-dom";
 import { Helmet } from "react-helmet";
 //import ReactNotification from "react-notifications-component";
 
@@ -7,14 +7,14 @@ import UnderConstruction from "./components/UnderConstruction";
 
 function App() {
   return (
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <Router basename={process.env.PUBLIC_URL}>
       {/*<ReactNotification />*/}
       <Helmet>
         <meta name="theme-color" content="#343a40" />
         <title>Sean Applebaum</title>
       </Helmet>
       <MainNavbar />
-
+      {/*
       <Route
         render={({ location }) => (
           <Switch location={location}>
@@ -39,29 +39,29 @@ function App() {
           </Switch>
         )}
       />
-      {/*
+      */}
+
       <Switch>
-        <Route path={prepath + "/"}>
+        <Route path={process.env.PUBLIC_URL + "/"}>
           <UnderConstruction />
         </Route>
-        <Route path={prepath + "/about"}>
-          <UnderConstruction />
+        <Route path={process.env.PUBLIC_URL + "/about"}>
+          <div>about</div>
         </Route>
-        <Route path={prepath + "/experience"}>
-          <UnderConstruction />
+        <Route path={process.env.PUBLIC_URL + "/experience"}>
+          <div>experience</div>
         </Route>
-        <Route path={prepath + "/skills"}>
-          <UnderConstruction />
+        <Route path={process.env.PUBLIC_URL + "/skills"}>
+          <div>skills</div>
         </Route>
-        <Route path={prepath + "/projects"}>
-          <UnderConstruction />
+        <Route path={process.env.PUBLIC_URL + "/projects"}>
+          <div>projects</div>
         </Route>
-        <Route path={prepath + "/contact"}>
-          <UnderConstruction />
+        <Route path={process.env.PUBLIC_URL + "/contact"}>
+          <div>contact</div>
         </Route>
       </Switch>
-    */}
-    </HashRouter>
+    </Router>
   );
 }
 
