@@ -18,23 +18,23 @@ function App() {
       <Route
         render={({ location }) => (
           <Switch location={location}>
-            <Route exact path="/">
+            <Route path={process.env.PUBLIC_URL + "/"}>
               <UnderConstruction />
             </Route>
-            <Route exact path="/about">
-              <UnderConstruction />
+            <Route path={process.env.PUBLIC_URL + "/about"}>
+              <div>about</div>
             </Route>
-            <Route exact path="/experience">
-              <UnderConstruction />
+            <Route path={process.env.PUBLIC_URL + "/experience"}>
+              <div>experience</div>
             </Route>
-            <Route exact path="/skills">
-              <UnderConstruction />
+            <Route path={process.env.PUBLIC_URL + "/skills"}>
+              <div>skills</div>
             </Route>
-            <Route exact path="/projects">
-              <UnderConstruction />
+            <Route path={process.env.PUBLIC_URL + "/projects"}>
+              <div>projects</div>
             </Route>
-            <Route exact path="/contact">
-              <UnderConstruction />
+            <Route path={process.env.PUBLIC_URL + "/contact"}>
+              <div>contact</div>
             </Route>
           </Switch>
         )}

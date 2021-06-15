@@ -6,7 +6,10 @@ import Image from "react-bootstrap/Image";
 function MainNavbar(params) {
   return (
     <Navbar variant="dark" bg="dark" expand="lg">
-      <Link style={{ textDecoration: "none" }} href="about">
+      <Link
+        style={{ textDecoration: "none" }}
+        to={process.env.PUBLIC_URL + "/about"}
+      >
         <Navbar.Brand className="navbar-brand">
           <Image
             src={process.env.PUBLIC_URL + "/logo320.png"}
@@ -22,7 +25,7 @@ function MainNavbar(params) {
 
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="about">About Me</Nav.Link>
+          <Nav.Link href={process.env.PUBLIC_URL + "/about"}>About Me</Nav.Link>
           <Nav.Link href="experience">Experience and Education</Nav.Link>
           <Nav.Link href="skills">Skills</Nav.Link>
           <Nav.Link href="projects">Projects</Nav.Link>
